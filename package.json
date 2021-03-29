@@ -1,7 +1,7 @@
 {
   "name": "squircle-houdini-css",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "",
   "dependencies": {
     "@testing-library/react": "^9.3.2",
