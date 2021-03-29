@@ -50,7 +50,7 @@ const drawSquircle = (ctx, geom, radius, smooth) => {
 
 // eslint-disable-next-line no-undef
 registerPaint(
-  "mask",
+  "squircle",
   class {
     static get inputProperties() {
       return ["--squircle-radius", "--squircle-smooth"];

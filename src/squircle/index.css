@@ -16,5 +16,5 @@
 .mask {
   --squircle-radius: var(--base-radius);
   --squircle-smooth: 1;
-  -webkit-mask: paint(mask);
+  -webkit-mask: paint(squircle);
 }

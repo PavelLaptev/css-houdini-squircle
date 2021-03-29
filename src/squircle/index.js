@@ -3,8 +3,11 @@ import "./index.css";
 
 function registerWorklet() {
   if ("paintWorklet" in CSS) {
+    // CSS.paintWorklet.addModule(
+    //   `${process.env.PUBLIC_URL}/paintWorklet/squircle.js`
+    // );
     CSS.paintWorklet.addModule(
-      `${process.env.PUBLIC_URL}/paintWorklet/squircle.js`
+      "https://raw.githubusercontent.com/PavelLaptev/css-houdini-experements/main/public/paintWorklet/squircle.js?token=AENEJGECIZRH4MFUJVKK72TAMJEZE"
     );
   }
 }
