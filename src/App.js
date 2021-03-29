@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 
-import Mask from "./mask/";
+import Mask from "./squircle";
 
 function App() {
   return (

@@ -4,7 +4,7 @@ import "./index.css";
 function registerWorklet() {
   if ("paintWorklet" in CSS) {
     CSS.paintWorklet.addModule(
-      `${process.env.PUBLIC_URL}/paintWorklet/mask.js`
+      `${process.env.PUBLIC_URL}/paintWorklet/squircle.js`
     );
   }
 }
