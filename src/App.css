@@ -1,12 +1,16 @@
-.App {
-  margin-left: 10px;
-  text-align: center;
-  width: 200px;
-  height: 200px;
-  border: 1px solid #333;
-  width: calc(random * 100%);
-  /* background: hsl(calc(random * 360), 50%, 50%); */
-  /* color: hsl(hue, saturation, lightness); */
-  /* width: calc(0.35746 * 100%); */
+body {
+  padding: 20px;
 }
 
+.legacy-border {
+  width: 400px;
+  height: 300px;
+  background: #3b99ff;
+  border-radius: var(--base-radius);
+  margin-bottom: 20px;
+  /* position: absolute; */
+}
+
+:root {
+  --base-radius: 60px;
+}
