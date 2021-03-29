@@ -58,40 +58,25 @@ registerPaint(
 
     paint(ctx, geom, properties) {
       const distanceRatio = 1.8;
-      const squircleSmooth = properties.get("--squircle-smooth").value * 10;
+      const squircleSmooth = properties.get("--squircle-smooth") * 10;
       const squircleRadius =
         parseInt(properties.get("--squircle-radius"), 10) * distanceRatio;
 
-      // if (squircleRadius < geom.height / 2) {
-      //   drawSquircle(ctx, geom, squircleRadius, squircleSmooth);
-      // } else {
-      //   drawSquircle(ctx, geom, geom.height / 2, squircleSmooth);
-      // }
-
       if (squircleRadius < geom.width / 2 && squircleRadius < geom.height / 2) {
-        drawSquircle(ctx, geom, squircleRadius, squircleSmooth);
+        drawSquircle(
+          ctx,
+          geom,
+          squircleRadius,
+          squircleSmooth !== 0 ? squircleSmooth : 1
+        );
       } else {
         drawSquircle(
           ctx,
           geom,
           Math.min(geom.width / 2, geom.height / 2),
-          squircleSmooth
+          squircleSmooth !== 0 ? squircleSmooth : 1
         );
       }
-      // if (squircleRadius > geom.height / 2) {
-      //   drawSquircle(ctx, geom, geom.height / 2, squircleSmooth);
-      // }
     }
   }
 );
-
-// ctx.bezierCurveTo(
-//   squircleSmooth !== 0
-//     ? geom.width - squircleRadius / squircleSmooth
-//     : geom.width - squircleRadius,
-//   0, // first bezier point
-//   geom.width,
-//   squircleSmooth !== 0 ? squircleRadius / squircleSmooth : 0, // second bezier point
-//   geom.width,
-//   squircleRadius // last connect point
-// );
