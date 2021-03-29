@@ -1,0 +1,12 @@
+# Ignore everything
+*
+
+# But not these files...
+!.npmignore
+!README.md
+# etc...
+
+# ...even if they are in subdirectories
+
+# if the files to be tracked are in subdirectories
+!*/public/paintWorklet/squircle.js
