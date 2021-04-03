@@ -1,110 +1,46 @@
-.wrapWidth {
-  border-top: 2px solid var(--dark-clr);
-  border-bottom: 2px solid var(--dark-clr);
-  width: 100%;
-}
-
 .wrap {
+  flex-wrap: wrap;
   max-width: var(--max-width);
   display: flex;
   width: 100%;
   margin: 0 auto;
-}
-
-.title {
-  width: 40%;
-  min-width: 400px;
-  border-right: 2px solid var(--dark-clr);
-  padding: var(--padding-xl) var(--padding-l);
-  h2 {
-    font-family: "Druck";
-    color: var(--dark-clr);
-    text-transform: uppercase;
-    font-size: 46px;
-  }
-}
-
-.content {
-  width: 100%;
   padding: var(--padding-xl) var(--padding-l);
 }
 
-.switcher {
-  position: relative;
-  display: flex;
-  padding: 8px;
-  margin-bottom: var(--padding-m);
-  &:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    background: var(--dark-clr);
-    mask-image: paint(squircle);
-    --squircle-smooth: 0.8;
-    --squircle-outline: 2px;
-  }
-  &Button {
-    z-index: 1;
-    cursor: pointer;
-    flex: 0 0 50%;
-    text-align: center;
-    color: var(--dark-clr);
-    padding: 16px;
-    font-family: "Druck";
-    text-transform: uppercase;
-    font-size: 32px;
-    margin: 4px;
-    transition: all 0.2s ease;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-  &Back {
-    position: absolute;
-    top: 8px;
-    left: 8px;
-    height: calc(100% - 16px);
-    width: 50%;
-    background: var(--dark-clr);
-    mask-image: paint(squircle);
-    --squircle-smooth: 1;
-    transition: all 300ms cubic-bezier(0.61, -0.15, 0.445, 0.995);
-    &Active {
-      transform: translateX(calc(100% - 16px));
-    }
-  }
-  &Active {
-    pointer-events: none;
-    color: var(--light-clr);
-    &:hover {
-      text-decoration: none;
-    }
-  }
-}
-
-.CSSExample {
-  display: flex;
-  flex-direction: column;
+.h2 {
+  font-family: "Druck";
   color: var(--dark-clr);
-  // border: 2px solid red;
-  padding: 40px;
-  background: paint(squircle);
-  --squircle-smooth: 0.8;
-  --squircle-radius: 16px;
-  --squircle-outline: 2px;
-  --squircle-color: var(--dark-clr);
-  p {
-    font-family: "Roboto Mono", monospace;
-    font-size: 16px;
-    margin: 0;
-    margin-bottom: var(--padding-xs);
+  text-transform: uppercase;
+  font-size: 46px;
+  margin-right: var(--padding-m);
+  flex: 1 2;
+  line-height: 1.3;
+}
+
+.cards {
+  display: flex;
+  flex: 2 1;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-m);
+  mask-image: paint(squircle);
+  margin: var(--padding-xxs);
+  --squircle-smooth: 0.4;
+  --squircle-radius: 22px;
+  &Header {
+    font-family: "Druck";
+    color: var(--dark-clr);
+    font-size: 20px;
   }
-  span {
-    color: rgba(0, 0, 0, 0.3);
+  &Svg {
+    min-width: 40px;
+    min-height: 40px;
+    max-width: 40px;
+    max-height: 40px;
+    margin-right: 32px;
   }
 }

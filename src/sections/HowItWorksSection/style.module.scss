@@ -1,0 +1,48 @@
+.wrapWidth {
+  border-top: 2px solid var(--dark-clr);
+  // border-bottom: 2px solid var(--dark-clr);
+  width: 100%;
+}
+
+.wrap {
+  max-width: var(--max-width);
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--padding-l);
+  align-items: center;
+}
+
+.canvasWrap {
+  display: flex;
+  flex: 1;
+  align-self: flex-end;
+}
+
+.canvas {
+  // border: 1px solid;
+}
+
+.content {
+  flex: 1;
+  padding: var(--padding-l) 0;
+}
+
+.h2 {
+  font-family: "Druck";
+  color: var(--dark-clr);
+  text-transform: uppercase;
+  font-size: 46px;
+  max-width: 500px;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+  max-width: 450px;
+}
+
+.range {
+  margin-bottom: 32px;
+}

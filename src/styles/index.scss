@@ -38,3 +38,10 @@ body {
   font-family: "Roboto", sans-serif;
   background: var(--main-clr);
 }
+
+a {
+  color: #f45;
+  &:hover {
+    text-decoration: none;
+  }
+}

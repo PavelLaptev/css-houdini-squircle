@@ -54,7 +54,7 @@ const Intro = () => {
         <div className={styles.buttons}>
           <Button text="GitHub" />
           <Button text="Codepen examples" />
-          <Button text="Article" />
+          <Button text="Medium" />
         </div>
       </div>
       <div className={styles.squircleWrap}>

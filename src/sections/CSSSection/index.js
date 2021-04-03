@@ -12,7 +12,7 @@ const CSSSection = () => {
     <div className={styles.wrapWidth}>
       <div className={styles.wrap}>
         <div className={styles.title}>
-          <h2>How to use in CSS:</h2>
+          <h2>How to use with CSS:</h2>
         </div>
         <div className={styles.content}>
           <div className={styles.switcher}>

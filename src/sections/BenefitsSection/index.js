@@ -98,7 +98,13 @@ const svgIcons = {
 const BenefitsSection = () => {
   const Card = (props) => {
     return (
-      <div className={styles.card}>
+      <div
+        className={styles.card}
+        style={{
+          "--squircle-radius": `${props.radius}px`,
+          "--squircle-smooth": `${props.smooth}`,
+        }}
+      >
         <svg
           className={styles.svg}
           viewBox="0 0 100 100"
@@ -116,12 +122,42 @@ const BenefitsSection = () => {
   return (
     <div className={styles.wrapWidth}>
       <div className={styles.wrap}>
-        <Card title="Handle via CSS" svg={svgIcons.css} />
-        <Card title="Flexible size" svg={svgIcons.flexible} />
-        <Card title="Outline or background" svg={svgIcons.outlineBackground} />
-        <Card title="Adjustable smoothness" svg={svgIcons.smooth} />
-        <Card title="Fast preformance" svg={svgIcons.fast} />
-        <Card title="Lightweight" svg={svgIcons.small} />
+        <Card
+          title="Handle via CSS"
+          svg={svgIcons.css}
+          radius={16}
+          smooth={1}
+        />
+        <Card
+          title="Flexible size"
+          svg={svgIcons.flexible}
+          radius={40}
+          smooth={1}
+        />
+        <Card
+          title="Outline or background"
+          svg={svgIcons.outlineBackground}
+          radius={16}
+          smooth={1}
+        />
+        <Card
+          title="Adjustable smoothness"
+          svg={svgIcons.smooth}
+          radius={30}
+          smooth={0}
+        />
+        <Card
+          title="Fast preformance"
+          svg={svgIcons.fast}
+          radius={12}
+          smooth={0.8}
+        />
+        <Card
+          title="Lightweight"
+          svg={svgIcons.small}
+          radius={40}
+          smooth={0.6}
+        />
       </div>
     </div>
   );
