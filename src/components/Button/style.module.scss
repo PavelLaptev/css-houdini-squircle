@@ -1,0 +1,14 @@
+.button {
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  padding: 14px 20px;
+  background: var(--dark-clr);
+  -webkit-mask-image: paint(squircle);
+  --squircle-radius: 16px;
+  --squircle-smooth: 0.5;
+  font-family: "Druck";
+  font-size: 16px;
+  color: white;
+}

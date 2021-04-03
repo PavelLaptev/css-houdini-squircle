@@ -1,0 +1,125 @@
+.wrap {
+  display: flex;
+  max-width: var(--max-width);
+  width: 100%;
+  padding: var(--padding-xl) var(--padding-l);
+}
+
+.logo {
+  position: relative;
+  &QLine {
+    position: absolute;
+    width: 6%;
+    height: 20%;
+    background: var(--dark-clr);
+    left: 49%;
+    top: 32%;
+    transform: rotate(-19deg);
+  }
+  &QInner {
+    position: absolute;
+    top: -7%;
+    left: 35%;
+    width: 19%;
+    height: 34%;
+    background: var(--dark-clr);
+    mask-image: paint(squircle);
+    --squircle-outline: 2px;
+  }
+  &QOuter {
+    position: absolute;
+    left: 28%;
+    width: 33%;
+    height: 42%;
+    background: var(--dark-clr);
+    mask-image: paint(squircle);
+    --squircle-outline: 2px;
+  }
+}
+
+.about {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: var(--padding-m);
+}
+
+.description {
+  width: 100%;
+  max-width: 600px;
+  margin-top: var(--padding-m);
+  display: flex;
+  p {
+    opacity: 0.7;
+    font-size: 17px;
+    flex: 1;
+    margin: 0;
+    margin-right: 32px;
+    color: var(--dark-clr);
+  }
+  h4 {
+    max-width: 400px;
+    flex: 1;
+    margin: 0;
+    // text-transform: uppercase;
+    font-family: "Druck", sans-serif;
+    font-size: 24px;
+    color: var(--dark-clr);
+  }
+}
+
+.buttons {
+  display: flex;
+  margin-top: var(--padding-l);
+  button {
+    margin-right: 8px;
+  }
+}
+
+//
+
+.squircleWrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: var(--padding-m);
+}
+
+.squircle {
+  position: relative;
+  width: 100%;
+  max-width: 550px;
+  height: 550px;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--light-clr);
+  mask-image: paint(squircle);
+  &:after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: var(--dark-clr);
+    mask-image: paint(squircle);
+    --squircle-outline: var(--intro-outline-width);
+  }
+}
+
+.rangeWrap {
+  width: 100%;
+  max-width: 300px;
+}
+
+.range {
+  width: 100%;
+  margin-bottom: 64px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

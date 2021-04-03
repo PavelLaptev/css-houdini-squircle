@@ -1,0 +1,40 @@
+@import "~normalize.css/normalize.css";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+@import "./fonts/fonts.scss";
+
+:root {
+  --min-width: 500px;
+  --max-width: 1600px;
+  //
+  --padding-xl: 100px;
+  --padding-l: 80px;
+  --padding-m: 40px;
+  --padding-s: 20px;
+  --padding-xs: 16px;
+  --padding-xxs: 8px;
+  //
+  --main-clr: #ebe1ff;
+  --dark-clr: #000;
+  --light-clr: #fff;
+  //
+  --base-radius: 60px;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+*::selection {
+  color: var(--light-clr);
+  background: var(--dark-clr);
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Roboto", sans-serif;
+  background: var(--main-clr);
+}

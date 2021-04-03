@@ -1,16 +1,13 @@
-body {
-  padding: 20px;
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.legacy-border {
+.legacyBorder {
   width: 400px;
   height: 300px;
   background: #3b99ff;
   border-radius: var(--base-radius);
   margin-bottom: 20px;
-  /* position: absolute; */
-}
-
-:root {
-  --base-radius: 60px;
 }

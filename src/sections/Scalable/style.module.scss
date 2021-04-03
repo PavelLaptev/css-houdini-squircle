@@ -1,0 +1,27 @@
+.wrap {
+  max-width: var(--max-width);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 480px;
+  padding: var(--padding-l) var(--padding-l);
+}
+
+.block {
+  font-family: "Druck", sans-serif;
+  font-size: 20px;
+  color: var(--light-clr);
+  background: var(--dark-clr);
+  padding: var(--padding-s);
+  background: var(--dark-clr);
+  mask-image: paint(squircle);
+  margin: var(--padding-xxs);
+  --squircle-smooth: 0.4;
+  --squircle-radius: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 300px;
+}

@@ -1,51 +1,61 @@
-const drawSquircle = (ctx, geom, radius, smooth) => {
+const drawSquircle = (ctx, geom, radius, smooth, lineWidth, color) => {
+  const defaultFill = color;
+  const lineWidthOffset = lineWidth / 2;
   // OPEN LEFT-TOP CORNER
   ctx.beginPath();
-  ctx.lineTo(radius, 0);
+  ctx.lineTo(radius, lineWidthOffset);
   // TOP-RIGHT CORNER
-  ctx.lineTo(geom.width - radius, 0);
+  ctx.lineTo(geom.width - radius, lineWidthOffset);
   ctx.bezierCurveTo(
     geom.width - radius / smooth,
-    0, // first bezier point
-    geom.width,
+    lineWidthOffset, // first bezier point
+    geom.width - lineWidthOffset,
     radius / smooth, // second bezier point
-    geom.width,
+    geom.width - lineWidthOffset,
     radius // last connect point
   );
   // BOTTOM-RIGHT CORNER
-  ctx.lineTo(geom.width, geom.height - radius);
+  ctx.lineTo(geom.width - lineWidthOffset, geom.height - radius);
   ctx.bezierCurveTo(
-    geom.width,
+    geom.width - lineWidthOffset,
     geom.height - radius / smooth, // first bezier point
     geom.width - radius / smooth,
-    geom.height, // second bezier point
+    geom.height - lineWidthOffset, // second bezier point
     geom.width - radius,
-    geom.height // last connect point
+    geom.height - lineWidthOffset // last connect point
   );
   // BOTTOM-LEFT CORNER
-  ctx.lineTo(radius, geom.height);
+  ctx.lineTo(radius, geom.height - lineWidthOffset);
   ctx.bezierCurveTo(
     radius / smooth,
-    geom.height, // first bezier point
-    0,
+    geom.height - lineWidthOffset, // first bezier point
+    lineWidthOffset,
     geom.height - radius / smooth, // second bezier point
-    0,
+    lineWidthOffset,
     geom.height - radius // last connect point
   );
   // CLOSE LEFT-TOP CORNER
-  ctx.lineTo(0, radius);
+  ctx.lineTo(lineWidthOffset, radius);
   ctx.bezierCurveTo(
-    0,
+    lineWidthOffset,
     radius / smooth, // first bezier point
     radius / smooth,
-    0, // second bezier point
+    lineWidthOffset, // second bezier point
     radius,
-    0 // last connect point
+    lineWidthOffset // last connect point
   );
   ctx.closePath();
 
-  ctx.fillStyle = "black";
-  ctx.fill();
+  if (lineWidth) {
+    // console.log(lineWidth);
+    ctx.strokeStyle = defaultFill;
+
+    ctx.lineWidth = lineWidth;
+    ctx.stroke();
+  } else {
+    ctx.fillStyle = defaultFill;
+    ctx.fill();
+  }
 };
 
 // eslint-disable-next-line no-undef
@@ -53,7 +63,12 @@ registerPaint(
   "squircle",
   class {
     static get inputProperties() {
-      return ["--squircle-radius", "--squircle-smooth"];
+      return [
+        "--squircle-radius",
+        "--squircle-smooth",
+        "--squircle-outline",
+        "--squircle-color",
+      ];
     }
 
     paint(ctx, geom, properties) {
@@ -61,20 +76,56 @@ registerPaint(
       const squircleSmooth = properties.get("--squircle-smooth") * 10;
       const squircleRadius =
         parseInt(properties.get("--squircle-radius"), 10) * distanceRatio;
+      const squrcleOutline = parseInt(properties.get("--squircle-outline"), 10);
+      const squrcleColor = properties
+        .get("--squircle-color")
+        .toString()
+        .replace(/\s/g, "");
+
+      const isSmooth = () => {
+        if (squircleSmooth !== "") {
+          if (squircleSmooth === 0) {
+            return 1;
+          }
+          return squircleSmooth;
+        }
+
+        return 8;
+      };
+
+      const isOutline = () => {
+        if (squrcleOutline) {
+          return squrcleOutline;
+        } else {
+          return 0;
+        }
+      };
+
+      const isColor = () => {
+        if (squrcleColor) {
+          return squrcleColor;
+        } else {
+          return "#f45";
+        }
+      };
 
       if (squircleRadius < geom.width / 2 && squircleRadius < geom.height / 2) {
         drawSquircle(
           ctx,
           geom,
           squircleRadius,
-          squircleSmooth !== 0 ? squircleSmooth : 1
+          isSmooth(),
+          isOutline(),
+          isColor()
         );
       } else {
         drawSquircle(
           ctx,
           geom,
           Math.min(geom.width / 2, geom.height / 2),
-          squircleSmooth !== 0 ? squircleSmooth : 1
+          isSmooth(),
+          isOutline(),
+          isColor()
         );
       }
     }

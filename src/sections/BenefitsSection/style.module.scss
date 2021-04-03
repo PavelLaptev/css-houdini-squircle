@@ -1,0 +1,40 @@
+.wrapWidth {
+  border-top: 2px solid var(--dark-clr);
+  border-bottom: 2px solid var(--dark-clr);
+  width: 100%;
+}
+
+.wrap {
+  max-width: var(--max-width);
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--padding-xl) var(--padding-l);
+}
+
+.card {
+  padding: var(--padding-m);
+  background: var(--light-clr);
+  mask-image: paint(squircle);
+  --squircle-smooth: 0.8;
+  --squircle-radius: 16px;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: var(--padding-xs);
+}
+
+.svg {
+  width: 100px;
+  height: 100px;
+}
+
+.h2 {
+  font-family: "Druck", sans-serif;
+  font-size: 24px;
+  color: var(--dark-clr);
+  margin-bottom: 0;
+  margin-top: 32px;
+}

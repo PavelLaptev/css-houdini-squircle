@@ -1,0 +1,70 @@
+.wrap {
+  max-width: var(--max-width);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: var(--padding-xl) var(--padding-l);
+}
+
+.button {
+  font-family: "Druck";
+  color: var(--dark-clr);
+  text-transform: uppercase;
+  font-size: 46px;
+  padding: 24px 32px;
+  margin: 24px 16px;
+
+  --squircle-radius: 24px;
+  --squircle-smooth: 0.9;
+}
+
+.fill {
+  color: var(--light-clr);
+  background: var(--dark-clr);
+  mask-image: paint(squircle);
+}
+
+.outline {
+  color: var(--dark-clr);
+  background: paint(squircle);
+  --squircle-outline: 2px;
+  --squircle-color: var(--dark-clr);
+}
+
+.gradient {
+  color: var(--light-clr);
+  background: linear-gradient(122.37deg, #ff0000 6.31%, #00ffa3 85.76%);
+  mask-image: paint(squircle);
+}
+
+.shadow {
+  background: paint(squircle);
+  --squircle-color: var(--main-clr);
+  filter: drop-shadow(-1px 10px 10px #a198b1);
+}
+
+.image {
+  color: white;
+  background-color: #8321ff;
+  background-image: url(../../assets/zebra.png);
+  background-size: cover;
+  mask-image: paint(squircle);
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  margin: 16px 32px;
+}
+
+.range {
+  width: 100%;
+
+  &:first-child {
+    margin-bottom: 24px;
+  }
+}
