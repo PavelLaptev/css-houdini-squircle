@@ -1,0 +1,13 @@
+@mixin h2 {
+  font-family: "Druck";
+  color: var(--dark-clr);
+  text-transform: uppercase;
+  font-size: 46px;
+  margin-bottom: 0;
+  @media only screen and (max-width: 1100px) {
+    font-size: 32px;
+  }
+  @media only screen and (max-width: 620px) {
+    font-size: 24px;
+  }
+}

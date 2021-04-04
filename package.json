@@ -1,9 +1,9 @@
 {
-  "name": "squircle-houdini-css",
+  "name": "css-houdini-squircle",
   "version": "0.1.1",
   "private": false,
   "homepage": "",
-  "dependencies": {
+  "devDependencies": {
     "node-sass": "^5.0.0",
     "normalize.css": "^8.0.1",
     "react": "^17.0.1",
@@ -16,7 +16,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "rm": "rm -rf build/*",
-    "deploy": "npm run rm && npm run build && gh-pages -d build"
+    "deploy": "git push origin `git subtree split --prefix build master`:gh-pages --force"
   },
   "eslintConfig": {
     "extends": "react-app"

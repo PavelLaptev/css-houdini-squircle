@@ -6,7 +6,10 @@
   margin: 0 auto;
   overflow: hidden;
   height: 480px;
-  padding: var(--padding-l) var(--padding-l);
+  padding: var(--vertical-paddings) var(--horizontal-paddings);
+  @media only screen and (max-width: 620px) {
+    display: none;
+  }
 }
 
 .block {

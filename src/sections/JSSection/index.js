@@ -10,18 +10,18 @@ const JSSection = () => {
           <h2>How to add the module:</h2>
         </div>
         <div className={styles.content}>
-          <div className={styles.CodeExample}>
-            <p>
+          <pre className={styles.CodeExample}>
+            <code>
               <span>// Add this script somewhere in your JS</span>
-            </p>
-            <p>if ("paintWorklet" in CSS) &#123;</p>
-            <p>  CSS.paintWorklet.addModule(</p>
-            <p>
-                  "https://www.unpkg.com/squircle-houdini-css@0.1.1/squircle.js"
-            </p>
-            <p>  );</p>
-            <p>&#125;</p>
-          </div>
+            </code>
+            <code>if ("paintWorklet" in CSS) &#123;</code>
+            <code>  CSS.paintWorklet.addModule(</code>
+            <code>
+                  "https://www.unpkg.com/css-houdini-squircle@0.1.1/squircle.min.js"
+            </code>
+            <code>  );</code>
+            <code>&#125;</code>
+          </pre>
         </div>
       </div>
     </div>

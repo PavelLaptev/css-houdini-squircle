@@ -14,11 +14,23 @@
   --padding-xs: 16px;
   --padding-xxs: 8px;
   //
+  --vertical-paddings: var(--padding-xl);
+  --horizontal-paddings: var(--padding-l);
+  //
   --main-clr: #ebe1ff;
   --dark-clr: #000;
   --light-clr: #fff;
   //
   --base-radius: 60px;
+  //
+  @media only screen and (max-width: 1100px) {
+    --vertical-paddings: var(--padding-m);
+    --horizontal-paddings: var(--padding-m);
+  }
+  @media only screen and (max-width: 620px) {
+    --vertical-paddings: var(--padding-s);
+    --horizontal-paddings: var(--padding-s);
+  }
 }
 
 *,
@@ -37,6 +49,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: "Roboto", sans-serif;
   background: var(--main-clr);
+  overflow-x: hidden;
 }
 
 a {

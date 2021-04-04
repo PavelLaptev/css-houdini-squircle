@@ -52,7 +52,10 @@ const Intro = () => {
           {/* <p>A lightweight CSS module squircles as a custom property</p> */}
         </div>
         <div className={styles.buttons}>
-          <Button text="GitHub" />
+          <Button
+            text="GitHub"
+            link="https://github.com/PavelLaptev/squircle-houdini-css"
+          />
           <Button text="Codepen examples" />
           <Button text="Medium" />
         </div>

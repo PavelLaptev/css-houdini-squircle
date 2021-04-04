@@ -8,7 +8,7 @@ const CanIUse = () => {
       <h2 className={styles.h2}>
         Can I{" "}
         <a
-          href="https://caniuse.com/css-paint-api"
+          href="https://ishoudinireadyyet.com/"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -22,7 +22,7 @@ const CanIUse = () => {
           <svg
             className={styles.cardSvg}
             viewBox="0 0 64 64"
-            fill="var(--dark-clr)"
+            fill="black"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path d="M20.0405 32.0022C20.0405 38.597 25.4053 43.9619 31.9998 43.9619C38.5938 43.9619 43.9583 38.5968 43.9583 32.0022C43.9583 25.4074 38.5938 20.0421 31.9998 20.0421C25.4053 20.0421 20.0405 25.4074 20.0405 32.0022Z" />
@@ -40,7 +40,7 @@ const CanIUse = () => {
           <svg
             className={styles.cardSvg}
             viewBox="0 0 64 64"
-            fill="var(--dark-clr)"
+            fill="black"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path

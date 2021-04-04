@@ -1,25 +1,34 @@
+@import "../../styles/mixins";
+
 .wrap {
   flex-wrap: wrap;
   max-width: var(--max-width);
   display: flex;
   width: 100%;
   margin: 0 auto;
-  padding: var(--padding-xl) var(--padding-l);
+  padding: var(--vertical-paddings) var(--horizontal-paddings);
 }
 
 .h2 {
-  font-family: "Druck";
-  color: var(--dark-clr);
-  text-transform: uppercase;
-  font-size: 46px;
+  @include h2;
+  margin-top: 0;
+  max-width: 500px;
+  margin-bottom: var(--padding-m);
   margin-right: var(--padding-m);
-  flex: 1 2;
-  line-height: 1.3;
+  @media only screen and (max-width: 1100px) {
+    margin-top: var(--padding-xs);
+  }
+  @media only screen and (max-width: 620px) {
+    margin-bottom: var(--padding-s);
+  }
 }
 
 .cards {
   display: flex;
   flex: 2 1;
+  @media only screen and (max-width: 620px) {
+    flex-direction: column;
+  }
 }
 
 .card {
@@ -31,9 +40,16 @@
   margin: var(--padding-xxs);
   --squircle-smooth: 0.4;
   --squircle-radius: 22px;
+  @media only screen and (max-width: 1100px) {
+    padding: var(--padding-s);
+  }
+  @media only screen and (max-width: 620px) {
+    justify-content: flex-start;
+    padding: var(--padding-s) 24px;
+  }
   &Header {
     font-family: "Druck";
-    color: var(--dark-clr);
+    color: black;
     font-size: 20px;
   }
   &Svg {
@@ -42,5 +58,8 @@
     max-width: 40px;
     max-height: 40px;
     margin-right: 32px;
+    @media only screen and (max-width: 620px) {
+      margin-right: 16px;
+    }
   }
 }

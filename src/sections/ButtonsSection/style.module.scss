@@ -6,7 +6,7 @@
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
-  padding: var(--padding-xl) var(--padding-l);
+  padding: var(--vertical-paddings) var(--horizontal-paddings);
 }
 
 .button {
@@ -15,10 +15,18 @@
   text-transform: uppercase;
   font-size: 46px;
   padding: 24px 32px;
-  margin: 24px 16px;
+  margin: 16px;
 
   --squircle-radius: 24px;
   --squircle-smooth: 0.9;
+
+  @media only screen and (max-width: 1100px) {
+    font-size: 32px;
+  }
+  @media only screen and (max-width: 620px) {
+    font-size: 24px;
+    margin: 8px;
+  }
 }
 
 .fill {
@@ -59,6 +67,10 @@
   flex-direction: column;
   width: 280px;
   margin: 16px 32px;
+  @media only screen and (max-width: 620px) {
+    width: 100%;
+    margin: 32px 12px 24px;
+  }
 }
 
 .range {

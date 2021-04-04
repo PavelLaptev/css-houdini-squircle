@@ -1,7 +1,11 @@
+@import "../../styles/mixins";
+
 .wrapWidth {
   border-top: 2px solid var(--dark-clr);
-  // border-bottom: 2px solid var(--dark-clr);
   width: 100%;
+  @media only screen and (max-width: 620px) {
+    border-top: none;
+  }
 }
 
 .wrap {
@@ -9,31 +13,37 @@
   display: flex;
   width: 100%;
   margin: 0 auto;
-  padding: 0 var(--padding-l);
+  padding: 0 var(--vertical-paddings);
   align-items: center;
+  @media only screen and (max-width: 1100px) {
+    flex-direction: column-reverse;
+  }
 }
 
 .canvasWrap {
   display: flex;
   flex: 1;
   align-self: flex-end;
-}
-
-.canvas {
-  // border: 1px solid;
+  @media only screen and (max-width: 1100px) {
+    align-self: unset;
+  }
 }
 
 .content {
   flex: 1;
-  padding: var(--padding-l) 0;
+  width: 100%;
+  padding: var(--vertical-paddings) 0;
+  @media only screen and (max-width: 1100px) {
+    padding-bottom: 0;
+  }
 }
 
 .h2 {
-  font-family: "Druck";
-  color: var(--dark-clr);
-  text-transform: uppercase;
-  font-size: 46px;
-  max-width: 500px;
+  @include h2;
+  margin-bottom: var(--padding-m);
+  @media only screen and (max-width: 1100px) {
+    margin-top: 24px;
+  }
 }
 
 .controls {
@@ -41,6 +51,10 @@
   flex-direction: column;
   margin-bottom: 32px;
   max-width: 450px;
+  @media only screen and (max-width: 1100px) {
+    max-width: none;
+    margin-bottom: 0;
+  }
 }
 
 .range {

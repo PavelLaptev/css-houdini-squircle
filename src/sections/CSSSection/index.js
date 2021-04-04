@@ -39,46 +39,46 @@ const CSSSection = () => {
             />
           </div>
 
-          <div
+          <pre
             className={styles.CSSExample}
             style={{ display: toggleBtn ? "none" : "flex" }}
           >
-            <p>background: color</p>
-            <p>mask-image: paint(squircle)</p>
-            <p>--squircle-radius: px</p>
-            <p>--squircle-smooth: number</p>
-            <p>
+            <code>background: color</code>
+            <code>mask-image: paint(squircle)</code>
+            <code>background: color mask-image: paint(squircle)</code>
+            <code>--squircle-radius: px</code>
+            <code>--squircle-smooth: number</code>
+            <code>
               <span>
                 // if you want to use property as background instead of mask
               </span>
-            </p>
-            <p>background: paint(squircle)</p>
-            <p>
+            </code>
+            <code>background: paint(squircle)</code>
+            <code>
               --squircle-color: color <span>// accept CSS variables</span>
-            </p>
-          </div>
+            </code>
+          </pre>
 
-          <div
+          <pre
             className={styles.CSSExample}
             style={{ display: !toggleBtn ? "none" : "flex" }}
           >
-            <p>
+            <code>
               <span>// Outline via background</span>
-            </p>
-            <p>background: paint(squircle)</p>
-            <p>--squircle-radius: px</p>
-            <p>--squircle-smooth: number</p>
-            <p>--squircle-outline: px</p>
-            <p></p>
-            <p>
+            </code>
+            <code>background: paint(squircle)</code>
+            <code>--squircle-radius: px</code>
+            <code>--squircle-smooth: number</code>
+            <code>--squircle-outline: px</code>
+            <code>
               <span>
                 // Outline via{" "}
                 <a href="#sd" target="_blank">
                   pseudo-element
                 </a>
               </span>
-            </p>
-          </div>
+            </code>
+          </pre>
         </div>
       </div>
     </div>

@@ -1,12 +1,19 @@
 .wrap {
+  position: relative;
   display: flex;
   max-width: var(--max-width);
   width: 100%;
-  padding: var(--padding-xl) var(--padding-l);
+  padding: var(--vertical-paddings) var(--horizontal-paddings);
+  @media only screen and (max-width: 1100px) {
+    flex-direction: column;
+  }
 }
 
 .logo {
   position: relative;
+  @media only screen and (max-width: 1100px) {
+    max-width: 500px;
+  }
   &QLine {
     position: absolute;
     width: 6%;
@@ -43,6 +50,9 @@
   flex-direction: column;
   justify-content: center;
   margin-right: var(--padding-m);
+  @media only screen and (max-width: 1100px) {
+    margin-right: 0;
+  }
 }
 
 .description {
@@ -50,30 +60,34 @@
   max-width: 600px;
   margin-top: var(--padding-m);
   display: flex;
-  p {
-    opacity: 0.7;
-    font-size: 17px;
-    flex: 1;
-    margin: 0;
-    margin-right: 32px;
-    color: var(--dark-clr);
-  }
   h4 {
     max-width: 400px;
     flex: 1;
     margin: 0;
-    // text-transform: uppercase;
     font-family: "Druck", sans-serif;
     font-size: 24px;
     color: var(--dark-clr);
+    @media only screen and (max-width: 620px) {
+      font-size: 20px;
+    }
   }
 }
 
 .buttons {
   display: flex;
   margin-top: var(--padding-l);
+  @media only screen and (max-width: 1100px) {
+    margin-top: var(--padding-m);
+  }
+  @media only screen and (max-width: 620px) {
+    flex-direction: column;
+  }
   button {
     margin-right: 8px;
+    @media only screen and (max-width: 620px) {
+      margin-right: 0;
+      margin-bottom: var(--padding-xxs);
+    }
   }
 }
 
@@ -85,6 +99,11 @@
   align-items: center;
   justify-content: center;
   margin-left: var(--padding-m);
+  @media only screen and (max-width: 1100px) {
+    margin-left: 0;
+    margin-top: var(--padding-m);
+    margin-bottom: var(--padding-s);
+  }
 }
 
 .squircle {
@@ -98,6 +117,10 @@
   align-items: center;
   background: var(--light-clr);
   mask-image: paint(squircle);
+  @media only screen and (max-width: 1100px) {
+    max-width: none;
+    height: 300px;
+  }
   &:after {
     pointer-events: none;
     content: "";
@@ -114,11 +137,18 @@
 .rangeWrap {
   width: 100%;
   max-width: 300px;
+  @media only screen and (max-width: 1100px) {
+    margin-top: 32px;
+    max-width: none;
+  }
 }
 
 .range {
   width: 100%;
   margin-bottom: 64px;
+  @media only screen and (max-width: 1100px) {
+    margin-bottom: 56px;
+  }
   &:last-child {
     margin-bottom: 0;
   }

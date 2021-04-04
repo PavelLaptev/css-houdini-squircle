@@ -1,0 +1,8 @@
+.toggle {
+  cursor: pointer;
+  width: 60px;
+  height: 32px;
+  background: var(--dark-clr);
+  mask-image: paint(squircle);
+  --squircle-smooth: 1;
+}

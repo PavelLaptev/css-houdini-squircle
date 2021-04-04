@@ -12,7 +12,6 @@ const HowItWorksSection = () => {
   React.useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
-    canvas.height = 360;
 
     const drawBezLine = (color, pointOne, PointTwo) => {
       ctx.strokeStyle = color;
@@ -35,7 +34,7 @@ const HowItWorksSection = () => {
       let geom = { width: containerWidth / 1.4, height: 600 };
       let shiftFigure = {
         x: (containerWidth - containerWidth / 1.4) / 2,
-        y: 100,
+        y: 20,
       };
 
       ///////////////////////
@@ -135,7 +134,7 @@ const HowItWorksSection = () => {
       );
       ctx.closePath();
       ctx.lineWidth = 2;
-      ctx.strokeStyle = "#7F7CFF";
+      ctx.strokeStyle = "rgba(0,0,0,1";
       ctx.stroke();
 
       ///////////////////////
@@ -151,7 +150,13 @@ const HowItWorksSection = () => {
       let parent = canvas.parentNode.parentNode;
       let styles = getComputedStyle(parent);
       let w = parseInt(styles.getPropertyValue("width"), 10);
+
       canvas.width = w / 2;
+      canvas.height = 360;
+      if (window.innerWidth < 1100) {
+        canvas.width = w;
+        canvas.height = 240;
+      }
       draw(canvas.width);
     };
 
@@ -164,7 +169,7 @@ const HowItWorksSection = () => {
     <div className={styles.wrapWidth}>
       <div className={styles.wrap}>
         <div className={styles.canvasWrap}>
-          <canvas className={styles.canvas} ref={canvasRef} />
+          <canvas ref={canvasRef} />
         </div>
         <div className={styles.content}>
           <h2 className={styles.h2}>How it works</h2>
