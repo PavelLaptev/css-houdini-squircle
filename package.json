@@ -2,7 +2,7 @@
   "name": "css-houdini-squircle",
   "version": "0.1.1",
   "private": false,
-  "homepage": "",
+  "homepage": "./",
   "devDependencies": {
     "node-sass": "^5.0.0",
     "normalize.css": "^8.0.1",
