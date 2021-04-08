@@ -13,7 +13,9 @@ const Range = (props) => {
     <div className={`${styles.wrap} ${props.className}`}>
       {props.tooltip !== "" ? (
         <div
-          style={{ left: `${(value / props.max) * 70}%` }}
+          style={{
+            left: `${((value - props.min) / (props.max - props.min)) * 100}%`,
+          }}
           className={styles.tooltip}
         >
           {props.tooltip}

@@ -119,6 +119,9 @@
   @media only screen and (max-width: 620px) {
     padding: 32px;
   }
+  &::-webkit-scrollbar {
+    display: none;
+  }
   code {
     font-family: "Roboto Mono", monospace;
     font-size: 16px;

@@ -9,6 +9,8 @@ import ButtonsSection from "./sections/ButtonsSection";
 import BenefitsSection from "./sections/BenefitsSection";
 import CanIUse from "./sections/CanIUse";
 import HowItWorksSection from "./sections/HowItWorksSection";
+import CompareSection from "./sections/CompareSection";
+import Footer from "./sections/Footer";
 
 if ("paintWorklet" in CSS) {
   CSS.paintWorklet.addModule(
@@ -27,6 +29,8 @@ const App = () => {
       <ButtonsSection />
       <BenefitsSection />
       <CanIUse />
+      <CompareSection />
+      <Footer />
     </div>
   );
 };

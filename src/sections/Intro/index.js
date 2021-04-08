@@ -56,8 +56,14 @@ const Intro = () => {
             text="GitHub"
             link="https://github.com/PavelLaptev/squircle-houdini-css"
           />
-          <Button text="Codepen examples" />
-          <Button text="Medium" />
+          <Button
+            text="Codepen examples"
+            link="https://codepen.io/collection/XjgQqp"
+          />
+          <Button
+            text="Medium"
+            link="https://pavellaptev.medium.com/squircles-on-the-web-houdini-to-the-rescue-5ef11f646b72"
+          />
         </div>
       </div>
       <div className={styles.squircleWrap}>

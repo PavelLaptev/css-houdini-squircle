@@ -1,0 +1,34 @@
+@import "../../styles/mixins";
+
+.wrapWidth {
+  width: 100%;
+  background-color: var(--dark-clr);
+}
+
+.wrap {
+  max-width: var(--max-width);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--vertical-paddings) var(--horizontal-paddings);
+  // align-items: center;
+}
+
+.title {
+  // font-family: "Druck";
+  font-family: "Roboto Mono", monospace;
+  font-size: 16px;
+  margin: 8px 0;
+  color: var(--light-clr);
+  // text-align: center;
+}
+
+.subtitle {
+  // font-family: "Druck";
+  font-family: "Roboto Mono", monospace;
+  font-size: 16px;
+  margin: 8px 0;
+  color: var(--light-clr);
+  // text-align: center;
+}

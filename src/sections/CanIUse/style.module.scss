@@ -11,7 +11,6 @@
 
 .h2 {
   @include h2;
-  margin-top: 0;
   max-width: 500px;
   margin-bottom: var(--padding-m);
   margin-right: var(--padding-m);
@@ -53,10 +52,7 @@
     font-size: 20px;
   }
   &Svg {
-    min-width: 40px;
-    min-height: 40px;
-    max-width: 40px;
-    max-height: 40px;
+    height: 46px;
     margin-right: 32px;
     @media only screen and (max-width: 620px) {
       margin-right: 16px;

@@ -72,7 +72,7 @@ registerPaint(
     }
 
     paint(ctx, geom, properties) {
-      const distanceRatio = 1.8;
+      const distanceRatio = 2;
       const squircleSmooth = properties.get("--squircle-smooth") * 10;
       const squircleRadius =
         parseInt(properties.get("--squircle-radius"), 10) * distanceRatio;

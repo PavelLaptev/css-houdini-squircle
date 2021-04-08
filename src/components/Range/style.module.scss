@@ -8,6 +8,7 @@
   position: absolute;
   left: 0;
   bottom: 28px;
+  transform: translateX(-50%);
   // height: 30px;
   max-width: 100px;
   line-height: 1.4;
@@ -44,5 +45,9 @@
     cursor: pointer;
     border-radius: 24px;
     outline: none;
+    transition: all 0.1s ease;
+    &:hover {
+      background: var(--accent-clr);
+    }
   }
 }

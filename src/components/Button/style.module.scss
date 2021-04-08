@@ -11,4 +11,8 @@
   font-family: "Druck";
   font-size: 16px;
   color: var(--light-clr);
+  transition: all 0.1s ease;
+  &:hover {
+    background: var(--accent-clr);
+  }
 }
