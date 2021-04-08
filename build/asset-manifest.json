@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "./static/css/main.7480dead.chunk.css",
+    "main.css": "./static/css/main.60f663ab.chunk.css",
     "main.js": "./static/js/main.8a243065.chunk.js",
     "main.js.map": "./static/js/main.8a243065.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.497cae14.js",
@@ -10,7 +10,7 @@
     "static/js/2.5f49935e.chunk.js.map": "./static/js/2.5f49935e.chunk.js.map",
     "index.html": "./index.html",
     "static/css/2.70c372c2.chunk.css.map": "./static/css/2.70c372c2.chunk.css.map",
-    "static/css/main.7480dead.chunk.css.map": "./static/css/main.7480dead.chunk.css.map",
+    "static/css/main.60f663ab.chunk.css.map": "./static/css/main.60f663ab.chunk.css.map",
     "static/js/2.5f49935e.chunk.js.LICENSE.txt": "./static/js/2.5f49935e.chunk.js.LICENSE.txt",
     "static/media/index.scss": "./static/media/druk-wide-bold.e241a38e.woff2",
     "static/media/style.module.scss": "./static/media/zebra.085af00e.png"
@@ -19,7 +19,7 @@
     "static/js/runtime-main.497cae14.js",
     "static/css/2.70c372c2.chunk.css",
     "static/js/2.5f49935e.chunk.js",
-    "static/css/main.7480dead.chunk.css",
+    "static/css/main.60f663ab.chunk.css",
     "static/js/main.8a243065.chunk.js"
   ]
 }

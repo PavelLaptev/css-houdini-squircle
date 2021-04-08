@@ -2,19 +2,19 @@
 
 ![Cover](https://raw.githubusercontent.com/PavelLaptev/squircle-houdini-css/main/README-images/cover.png)
 
-A tiny CSS Houdini module that allows to add a squircle shape to HTML elements.
+A tiny CSS Houdini module that allows adding a squircle shape to HTML elements.
 
 ---
 
-### 🎻 [Demo on GitHub Pages](https://pavellaptev.github.io/squircle-houdini-css/)
+### 🎻  [Demo on GitHub Pages](https://pavellaptev.github.io/squircle-houdini-css/)
 
-### 👾 [Codepen examples](https://codepen.io/collection/XjgQqp)
+### 👾  [Codepen examples](https://codepen.io/collection/XjgQqp)
 
-### 🗞 [Medium article](https://pavellaptev.medium.com/squircles-on-the-web-houdini-to-the-rescue-5ef11f646b72)
+### 🗞  [Medium article](https://pavellaptev.medium.com/squircles-on-the-web-houdini-to-the-rescue-5ef11f646b72)
 
 ---
 
-## 🎛 Custom CSS Properties
+## 🎛  Custom CSS Properties
 
 ![--squircle-radius](https://raw.githubusercontent.com/PavelLaptev/squircle-houdini-css/main/README-images/--squircle-radius.png)
 
@@ -22,9 +22,9 @@ A tiny CSS Houdini module that allows to add a squircle shape to HTML elements.
 
 The property controls the roundness of the corners.
 
-Syntax: **`<px>`**
-Defaul value: **`—`**
-Min/Max values: **`—`**
+- Syntax: **`<px>`**
+- Defaul value: **`—`**
+- Min/Max values: **`—`**
 
 ---
 
@@ -32,11 +32,11 @@ Min/Max values: **`—`**
 
 ### --squircle-smooth
 
-The property controls length of bezier guide lines. Could be difined by `--squircle-ratio`.
+The property controls the length of bezier guide lines. Could be defined by `--squircle-ratio`.
 
-Syntax: **`<number>`**
-Defaul value: **`1`**
-Min/Max values: **`0.1 / 1`**
+- Syntax: **`<number>`**
+- Defaul value: **`1`**
+- Min/Max values: **`0.1 / 1`**
 
 ---
 
@@ -44,11 +44,11 @@ Min/Max values: **`0.1 / 1`**
 
 ### --squircle-outline
 
-The property controls squrcle outline. There are two methods how too use it with `background-mask` and `mask`+`:pseudo-element`. to find out more check [codepen examples](https://codepen.io/collection/XjgQqp).
+The property controls squircle outline. There are two methods how too use it with `background-mask` and `mask`+`:pseudo-element`. to find out more check [codepen examples](https://codepen.io/collection/XjgQqp).
 
-Syntax: **`<px>`**
-Defaul value: **`—`**
-Min/Max values: **`—`**
+- Syntax: **`<px>`**
+- Defaul value: **`—`**
+- Min/Max values: **`—`**
 
 ---
 
@@ -58,25 +58,25 @@ Min/Max values: **`—`**
 
 The property accepts any color, including variables.
 
-Syntax: **`<color>`**
-Defaul value: **`#f45`**
-Min/Max values: **`—`**
+- Syntax: **`<color>`**
+- Defaul value: **`#f45`**
+- Min/Max values: **`—`**
 
 ---
 
 ### --squircle-ratio: `<number>`
 
-This property makes the squrcle radius visualy the same as the standart `border-radius`.
+This property makes the squircle radius visually the same as the standart `border-radius`.
 
-Syntax: **`<px>`**
-Defaul value: **`1.8`**
-Min/Max values: **`—`**
+- Syntax: **`<px>`**
+- Defaul value: **`1.8`**
+- Min/Max values: **`—`**
 
 ---
 
-## 🕹 How to install
+## 🕹  How to install
 
-In order make squircle works you need to register the module somewere as a JS script.
+In order to make squircle works you need to register the module somewere as a JS script.
 
 #### Use via external link
 
@@ -84,7 +84,7 @@ In order make squircle works you need to register the module somewere as a JS sc
 <script>
   if ("paintWorklet" in CSS) {
     CSS.paintWorklet.addModule(
-      "https://www.unpkg.com/css-houdini-squircle@0.1.1/squircle.min.js"
+      "https://www.unpkg.com/css-houdini-squircle@0.1.3/squircle.min.js"
     );
   }
 </script>
@@ -106,6 +106,6 @@ https://www.unpkg.com/browse/css-houdini-squircle@0.1.3/squircle.min.js
 
 ---
 
-## 🚬 TO-DO
+## 🚬  TO-DO
 
 - Transition support
