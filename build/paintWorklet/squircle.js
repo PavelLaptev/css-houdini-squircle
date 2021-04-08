@@ -49,7 +49,6 @@ const drawSquircle = (ctx, geom, radius, smooth, lineWidth, color) => {
   if (lineWidth) {
     // console.log(lineWidth);
     ctx.strokeStyle = defaultFill;
-
     ctx.lineWidth = lineWidth;
     ctx.stroke();
   } else {
@@ -62,17 +61,22 @@ const drawSquircle = (ctx, geom, radius, smooth, lineWidth, color) => {
 registerPaint(
   "squircle",
   class {
+    static get contextOptions() {
+      return { alpha: true };
+    }
     static get inputProperties() {
       return [
         "--squircle-radius",
         "--squircle-smooth",
         "--squircle-outline",
         "--squircle-color",
+        "--squircle-ratio",
       ];
     }
 
     paint(ctx, geom, properties) {
-      const distanceRatio = 2;
+      let customRatio = properties.get("--squircle-ratio");
+      const distanceRatio = parseInt(customRatio) ? parseInt(customRatio) : 1.8;
       const squircleSmooth = properties.get("--squircle-smooth") * 10;
       const squircleRadius =
         parseInt(properties.get("--squircle-radius"), 10) * distanceRatio;
