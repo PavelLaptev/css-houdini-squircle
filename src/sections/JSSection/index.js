@@ -17,7 +17,7 @@ const JSSection = () => {
             <code>if ("paintWorklet" in CSS) &#123;</code>
             <code>  CSS.paintWorklet.addModule(</code>
             <code>
-                  "https://www.unpkg.com/css-houdini-squircle@0.1.1/squircle.min.js"
+                  "https://www.unpkg.com/css-houdini-squircle@0.1.3/squircle.min.js"
             </code>
             <code>  );</code>
             <code>&#125;</code>

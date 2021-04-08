@@ -1,6 +1,6 @@
 # Squircle CSS Houdini
 
-![Cover](README-images/cover.png)
+![Cover](https://raw.githubusercontent.com/PavelLaptev/squircle-houdini-css/main/README-images/cover.png)
 
 A tiny CSS Houdini module that allows to add a squircle shape to HTML elements.
 
@@ -16,7 +16,7 @@ A tiny CSS Houdini module that allows to add a squircle shape to HTML elements.
 
 ## 🎛 Custom CSS Properties
 
-![--squircle-radius](README-images/--squircle-radius.png)
+![--squircle-radius](https://raw.githubusercontent.com/PavelLaptev/squircle-houdini-css/main/README-images/--squircle-radius.png)
 
 ### --squircle-radius
 
@@ -28,7 +28,7 @@ Min/Max values: **`—`**
 
 ---
 
-![--squircle-smooth](README-images/--squircle-smooth.png)
+![--squircle-smooth](https://raw.githubusercontent.com/PavelLaptev/squircle-houdini-css/main/README-images/--squircle-smooth.png)
 
 ### --squircle-smooth
 
@@ -40,7 +40,7 @@ Min/Max values: **`0.1 / 1`**
 
 ---
 
-![--squircle-outline](README-images/--squircle-outline.png)
+![--squircle-outline](https://raw.githubusercontent.com/PavelLaptev/squircle-houdini-css/main/README-images/--squircle-outline.png)
 
 ### --squircle-outline
 
@@ -52,7 +52,7 @@ Min/Max values: **`—`**
 
 ---
 
-![--squircle-color](README-images/--squircle-color.png)
+![--squircle-color](https://raw.githubusercontent.com/PavelLaptev/squircle-houdini-css/main/README-images/--squircle-color.png)
 
 ### --squircle-color
 
@@ -98,10 +98,10 @@ npm i css-houdini-squircle
 
 #### Download
 
-You can download the min version of the module [from UNPKG](https://www.unpkg.com/browse/css-houdini-squircle@0.1.1/squircle.min.js)
+You can download the min version of the module [from UNPKG](https://www.unpkg.com/browse/css-houdini-squircle@0.1.3/squircle.min.js)
 
 ```
-https://www.unpkg.com/browse/css-houdini-squircle@0.1.1/squircle.min.js
+https://www.unpkg.com/browse/css-houdini-squircle@0.1.3/squircle.min.js
 ```
 
 ---
