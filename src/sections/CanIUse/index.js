@@ -18,10 +18,7 @@ const CanIUse = () => {
       </h2>
 
       <div className={styles.cards}>
-        <div
-          className={styles.card}
-          style={{ background: "#C9FFD8", flex: 1.5 }}
-        >
+        <div className={styles.card} style={{ background: "#C9FFD8" }}>
           <svg
             className={styles.cardSvg}
             viewBox="0 0 152 46"
@@ -39,7 +36,7 @@ const CanIUse = () => {
           <h2 className={styles.cardHeader}>Chrome, Edge, Opera</h2>
         </div>
 
-        <div className={styles.card} style={{ background: "#FFDEBF", flex: 1 }}>
+        <div className={styles.card} style={{ background: "#FFDEBF" }}>
           <svg
             className={styles.cardSvg}
             viewBox="0 0 64 64"

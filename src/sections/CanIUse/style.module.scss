@@ -11,6 +11,7 @@
 
 .h2 {
   @include h2;
+  flex: 1;
   max-width: 500px;
   margin-bottom: var(--padding-m);
   margin-right: var(--padding-m);
@@ -33,13 +34,14 @@
 .card {
   display: flex;
   align-items: center;
-  justify-content: center;
   padding: var(--padding-m);
   mask-image: paint(squircle);
   margin: var(--padding-xxs);
   --squircle-smooth: 0.4;
   --squircle-radius: 22px;
   @media only screen and (max-width: 1100px) {
+    flex-direction: column;
+    align-items: flex-start;
     padding: var(--padding-s);
   }
   @media only screen and (max-width: 620px) {
@@ -50,8 +52,13 @@
     font-family: "Druck";
     color: black;
     font-size: 20px;
+    margin: 0;
+    @media only screen and (max-width: 1100px) {
+      margin-top: var(--padding-s);
+    }
   }
   &Svg {
+    flex: none;
     height: 46px;
     margin-right: 32px;
     @media only screen and (max-width: 620px) {
