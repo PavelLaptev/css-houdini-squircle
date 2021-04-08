@@ -73,7 +73,11 @@ const CSSSection = () => {
             <code>
               <span>
                 // Outline via{" "}
-                <a href="#sd" target="_blank">
+                <a
+                  href="https://codepen.io/PavelLaptev/pen/OJWgRWG"
+                  rel="noreferrer"
+                  target="_blank"
+                >
                   pseudo-element
                 </a>
               </span>
