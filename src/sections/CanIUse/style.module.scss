@@ -7,6 +7,9 @@
   width: 100%;
   margin: 0 auto;
   padding: var(--vertical-paddings) var(--horizontal-paddings);
+  @media only screen and (max-width: 1100px) {
+    flex-direction: column;
+  }
 }
 
 .h2 {
@@ -36,16 +39,21 @@
   align-items: center;
   padding: var(--padding-m);
   mask-image: paint(squircle);
-  margin: var(--padding-xxs);
+  margin: var(--padding-xxs) 0;
+  margin-right: var(--padding-xxs);
   --squircle-smooth: 0.4;
   --squircle-radius: 22px;
   @media only screen and (max-width: 1100px) {
     flex-direction: column;
     align-items: flex-start;
     padding: var(--padding-s);
+    &:last-child {
+      margin-right: 0;
+    }
   }
   @media only screen and (max-width: 620px) {
     justify-content: flex-start;
+    margin-right: 0;
     padding: var(--padding-s) 24px;
   }
   &Header {

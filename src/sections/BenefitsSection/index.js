@@ -143,7 +143,7 @@ const BenefitsSection = () => {
         <Card
           title="Adjustable smoothness"
           svg={svgIcons.smooth}
-          radius={30}
+          radius={20}
           smooth={0}
         />
         <Card
