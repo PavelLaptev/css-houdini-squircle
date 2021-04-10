@@ -17,7 +17,7 @@ const Footer = () => {
             rel="noreferrer"
           >
             {" "}
-            in the GitHub isssues
+            in the GitHub issues
           </a>{" "}
           or send a pull request
         </h3>
