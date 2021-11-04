@@ -57,10 +57,8 @@ const drawSquircle = (ctx, geom, radius, smooth, lineWidth, color) => {
   }
 };
 
-// eslint-disable-next-line no-undef
-registerPaint(
-  "squircle",
-  class {
+if (typeof registerPaint !== "undefined") {
+  class SquircleClass {
     static get contextOptions() {
       return { alpha: true };
     }
@@ -75,26 +73,34 @@ registerPaint(
     }
 
     paint(ctx, geom, properties) {
-      let customRatio = properties.get("--squircle-ratio");
-      const distanceRatio = parseInt(customRatio) ? parseInt(customRatio) : 1.8;
-      const squircleSmooth = properties.get("--squircle-smooth") * 10;
+      const customRatio = properties.get("--squircle-ratio");
+      const smoothRatio = 10;
+      const distanceRatio = parseFloat(customRatio)
+        ? parseFloat(customRatio)
+        : 1.8;
+      const squircleSmooth = parseFloat(
+        properties.get("--squircle-smooth") * smoothRatio
+      );
       const squircleRadius =
         parseInt(properties.get("--squircle-radius"), 10) * distanceRatio;
-      const squrcleOutline = parseInt(properties.get("--squircle-outline"), 10);
+      const squrcleOutline = parseFloat(
+        properties.get("--squircle-outline"),
+        10
+      );
       const squrcleColor = properties
         .get("--squircle-color")
         .toString()
         .replace(/\s/g, "");
 
       const isSmooth = () => {
-        if (squircleSmooth !== "") {
+        if (typeof properties.get("--squircle-smooth")[0] !== "undefined") {
           if (squircleSmooth === 0) {
             return 1;
           }
           return squircleSmooth;
+        } else {
+          return 10;
         }
-
-        return 8;
       };
 
       const isOutline = () => {
@@ -134,4 +140,7 @@ registerPaint(
       }
     }
   }
-);
+
+  // eslint-disable-next-line no-undef
+  registerPaint("squircle", SquircleClass);
+}

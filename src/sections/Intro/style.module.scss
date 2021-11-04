@@ -153,3 +153,12 @@
     margin-bottom: 0;
   }
 }
+
+.test {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background: var(--dark-clr);
+  mask-image: paint(squircle);
+  --squircle-smooth: 1;
+}
