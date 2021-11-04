@@ -81,10 +81,20 @@ In order to make squircle works you need to register the module somewere as a JS
 #### Use via external link
 
 ```js
+// latest version
 <script>
   if ("paintWorklet" in CSS) {
     CSS.paintWorklet.addModule(
-      "https://www.unpkg.com/css-houdini-squircle@0.1.3/squircle.min.js"
+      "https://www.unpkg.com/css-houdini-squircle/squircle.min.js"
+    );
+  }
+</script>
+
+// or particular version
+<script>
+  if ("paintWorklet" in CSS) {
+    CSS.paintWorklet.addModule(
+      "https://www.unpkg.com/css-houdini-squircle@0.2.0/squircle.min.js"
     );
   }
 </script>
@@ -98,10 +108,11 @@ npm i css-houdini-squircle
 
 #### Download
 
-You can download the min version of the module [from UNPKG](https://www.unpkg.com/browse/css-houdini-squircle@0.1.3/squircle.min.js)
+You can download the min version of the module [from UNPKG](https://www.unpkg.com/browse/css-houdini-squircle/squircle.min.js)
 
 ```
-https://www.unpkg.com/browse/css-houdini-squircle@0.1.3/squircle.min.js
+// latest version
+https://www.unpkg.com/browse/css-houdini-squircle/squircle.min.js
 ```
 
 ---
