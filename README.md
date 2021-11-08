@@ -57,6 +57,7 @@ The property controls squircle outline. There are two methods how too use it wit
 ### --squircle-fill
 
 The property accepts any color, including variables.
+
 ⚠️ Work only with `background: paint(squircle);`. For `mask-image: paint(squircle);` use `background` property.
 
 - Syntax: **`<color>`**
