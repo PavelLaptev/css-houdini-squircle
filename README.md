@@ -52,11 +52,12 @@ The property controls squircle outline. There are two methods how too use it wit
 
 ---
 
-![--squircle-color](https://raw.githubusercontent.com/PavelLaptev/squircle-houdini-css/main/README-images/--squircle-color.png)
+![--squircle-fill](https://raw.githubusercontent.com/PavelLaptev/squircle-houdini-css/main/README-images/--squircle-fill.png)
 
-### --squircle-color
+### --squircle-fill
 
 The property accepts any color, including variables.
+⚠️ Work only with `background: paint(squircle);`. For `mask-image: paint(squircle);` use `background` property.
 
 - Syntax: **`<color>`**
 - Defaul value: **`#f45`**
@@ -117,6 +118,29 @@ https://www.unpkg.com/browse/css-houdini-squircle/squircle.min.js
 
 ---
 
+## ✨  Use `css-paint-polyfill`
+
+In order to get the module work on other browsers, you can use [Paint Worklets polyfill](https://github.com/GoogleChromeLabs/css-paint-polyfill).
+
+⚠️ Check for artefacts before deploying.
+
+```js
+// use with polifill example
+<script>
+  (async function () {
+    if (!("paintWorklet" in CSS)) {
+      await import("css-paint-polyfill");
+    }
+
+    CSS.paintWorklet.addModule(
+      `https://www.unpkg.com/css-houdini-squircle/squircle.min.js`
+    );
+  })();
+</script>
+```
+
+---
+
 ## 🚬  TO-DO
 
-- Transition support
+- Animation support

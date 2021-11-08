@@ -67,7 +67,7 @@ if (typeof registerPaint !== "undefined") {
         "--squircle-radius",
         "--squircle-smooth",
         "--squircle-outline",
-        "--squircle-color",
+        "--squircle-fill",
         "--squircle-ratio",
       ];
     }
@@ -88,7 +88,7 @@ if (typeof registerPaint !== "undefined") {
         10
       );
       const squrcleColor = properties
-        .get("--squircle-color")
+        .get("--squircle-fill")
         .toString()
         .replace(/\s/g, "");
 

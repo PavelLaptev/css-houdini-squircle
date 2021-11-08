@@ -12,11 +12,15 @@ import HowItWorksSection from "./sections/HowItWorksSection";
 import CompareSection from "./sections/CompareSection";
 import Footer from "./sections/Footer";
 
-if ("paintWorklet" in CSS) {
+(async function () {
+  if (!("paintWorklet" in CSS)) {
+    await import("css-paint-polyfill");
+  }
+
   CSS.paintWorklet.addModule(
     `${process.env.PUBLIC_URL}/paintWorklet/squircle.js`
   );
-}
+})();
 
 const App = () => {
   return (
