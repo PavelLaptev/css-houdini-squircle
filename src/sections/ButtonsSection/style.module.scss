@@ -39,7 +39,7 @@
   color: var(--dark-clr);
   background: paint(squircle);
   --squircle-outline: 2px;
-  --squircle-color: var(--dark-clr);
+  --squircle-fill: var(--dark-clr);
 }
 
 .gradient {
@@ -50,7 +50,7 @@
 
 .shadow {
   background: paint(squircle);
-  --squircle-color: var(--main-clr);
+  --squircle-fill: var(--main-clr);
   filter: drop-shadow(-1px 10px 10px #a198b1);
 }
 
