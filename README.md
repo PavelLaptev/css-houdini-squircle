@@ -10,6 +10,10 @@ A tiny CSS Houdini module that allows adding a squircle shape to HTML elements.
 
 ### 👾  [Codepen examples](https://codepen.io/collection/XjgQqp)
 
+### 👾  [Codesandbox sample with React](https://codesandbox.io/s/houdini-squircle-react-ithjs1)
+
+### 📦  [NPM package](https://www.npmjs.com/package/css-houdini-squircle)
+
 ### 🗞  [Medium article](https://pavellaptev.medium.com/squircles-on-the-web-houdini-to-the-rescue-5ef11f646b72)
 
 ---
