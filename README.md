@@ -96,7 +96,7 @@ In order to make squircle works you need to register the module somewere as a JS
 <script>
   if ("paintWorklet" in CSS) {
     CSS.paintWorklet.addModule(
-      "https://www.unpkg.com/css-houdini-squircle@0.2.0/squircle.min.js"
+      "https://www.unpkg.com/css-houdini-squircle@0.2.2/squircle.min.js"
     );
   }
 </script>
