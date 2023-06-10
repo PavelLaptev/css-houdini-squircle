@@ -147,7 +147,7 @@ const BenefitsSection = () => {
           smooth={0}
         />
         <Card
-          title="Fast preformance"
+          title="Fast performance"
           svg={svgIcons.fast}
           radius={12}
           smooth={0.8}
