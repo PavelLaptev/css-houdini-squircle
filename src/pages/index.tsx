@@ -13,15 +13,13 @@ import Footer from "@/sections/Footer";
 
 import styles from "./app.module.scss";
 
-// (async function () {
-//   if (!("paintWorklet" in CSS)) {
-//     await import("css-paint-polyfill");
-//   }
+(async function () {
+  if (!(("paintWorklet" in CSS) as any)) {
+    await import("css-paint-polyfill");
+  }
 
-//   CSS.paintWorklet.addModule(
-//     `${process.env.PUBLIC_URL}/paintWorklet/squircle.js`
-//   );
-// })();
+  // (CSS as any).paintWorklet.addModule("../../lib/paintWorklet/squircle.js");
+})();
 
 export default function Home() {
   return (
