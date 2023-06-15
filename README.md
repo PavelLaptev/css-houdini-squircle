@@ -23,10 +23,16 @@ A tiny CSS Houdini module that allows adding a squircle shape to HTML elements.
 ### --squircle-radius
 
 The property controls the roundness of the corners.
+You can provide 1, 2, 3 or 4 values, similar to padding/margin in CSS.
+The order is clockwise: top left, top right, bottom right, bottom left
 
-- Syntax: **`<px>`**
-- Defaul value: **`—`**
-- Min/Max values: **`—`**
+- Syntax: **`<px>`** OR **`<px px>`**  OR **`<px px px>`** OR **`<px px px px>`**
+- Defaul value: **`8px`** (if no radius at all is defined) OR: **`0`** (if only some radii are defined)
+- Min/Max values: **`—`** (the radii are capped at half of the shorter side of width/ height)
+
+#### --squircle-radius-top-left, --squircle-radius-top-right, --squircle-radius-bottom-right, --squircle-radius-bottom-left
+
+Set radii for the corners individually
 
 ---
 
