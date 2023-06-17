@@ -1,53 +1,52 @@
-const drawSquircle = (ctx, geom, radius, smooth, lineWidth, color) => {
+const drawSquircle = (ctx, geom, radii, smooth, lineWidth, color) => {
   const defaultFill = color;
   const lineWidthOffset = lineWidth / 2;
   // OPEN LEFT-TOP CORNER
   ctx.beginPath();
-  ctx.lineTo(radius, lineWidthOffset);
+  ctx.lineTo(radii[0], lineWidthOffset);
   // TOP-RIGHT CORNER
-  ctx.lineTo(geom.width - radius, lineWidthOffset);
+  ctx.lineTo(geom.width - radii[1], lineWidthOffset);
   ctx.bezierCurveTo(
-    geom.width - radius / smooth,
+    geom.width - radii[1] / smooth,
     lineWidthOffset, // first bezier point
     geom.width - lineWidthOffset,
-    radius / smooth, // second bezier point
+    radii[1] / smooth, // second bezier point
     geom.width - lineWidthOffset,
-    radius // last connect point
+    radii[1] // last connect point
   );
   // BOTTOM-RIGHT CORNER
-  ctx.lineTo(geom.width - lineWidthOffset, geom.height - radius);
+  ctx.lineTo(geom.width - lineWidthOffset, geom.height - radii[2]);
   ctx.bezierCurveTo(
     geom.width - lineWidthOffset,
-    geom.height - radius / smooth, // first bezier point
-    geom.width - radius / smooth,
+    geom.height - radii[2] / smooth, // first bezier point
+    geom.width - radii[2] / smooth,
     geom.height - lineWidthOffset, // second bezier point
-    geom.width - radius,
+    geom.width - radii[2],
     geom.height - lineWidthOffset // last connect point
   );
   // BOTTOM-LEFT CORNER
-  ctx.lineTo(radius, geom.height - lineWidthOffset);
+  ctx.lineTo(radii[3], geom.height - lineWidthOffset);
   ctx.bezierCurveTo(
-    radius / smooth,
+    radii[3] / smooth,
     geom.height - lineWidthOffset, // first bezier point
     lineWidthOffset,
-    geom.height - radius / smooth, // second bezier point
+    geom.height - radii[3] / smooth, // second bezier point
     lineWidthOffset,
-    geom.height - radius // last connect point
+    geom.height - radii[3] // last connect point
   );
   // CLOSE LEFT-TOP CORNER
-  ctx.lineTo(lineWidthOffset, radius);
+  ctx.lineTo(lineWidthOffset, radii[0]);
   ctx.bezierCurveTo(
     lineWidthOffset,
-    radius / smooth, // first bezier point
-    radius / smooth,
+    radii[0] / smooth, // first bezier point
+    radii[0] / smooth,
     lineWidthOffset, // second bezier point
-    radius,
+    radii[0],
     lineWidthOffset // last connect point
   );
   ctx.closePath();
 
   if (lineWidth) {
-    // console.log(lineWidth);
     ctx.strokeStyle = defaultFill;
     ctx.lineWidth = lineWidth;
     ctx.stroke();
@@ -65,6 +64,10 @@ if (typeof registerPaint !== "undefined") {
     static get inputProperties() {
       return [
         "--squircle-radius",
+        "--squircle-radius-top-left", // <-- if the order changes ...
+        "--squircle-radius-top-right",
+        "--squircle-radius-bottom-right",
+        "--squircle-radius-bottom-left", // --> the slice values of individualRadiiProps need to be updated
         "--squircle-smooth",
         "--squircle-outline",
         "--squircle-fill",
@@ -81,8 +84,49 @@ if (typeof registerPaint !== "undefined") {
       const squircleSmooth = parseFloat(
         properties.get("--squircle-smooth") * smoothRatio
       );
-      const squircleRadius =
-        parseInt(properties.get("--squircle-radius"), 10) * distanceRatio;
+
+      // CALCULATE RADII
+      const individualRadiiProps = SquircleClass.inputProperties.slice(1, 5);
+
+      let squircleRadii = individualRadiiProps.map(prop => {
+        const value = properties.get(prop);
+        return value ? parseInt(value, 10) * distanceRatio : NaN;
+      });
+
+      let shorthand_R;
+
+      // Check if any of the individual radii are NaN, if so, process the shorthand
+      if (squircleRadii.some(isNaN)) {
+        const radiusRegex = /([0-9]+[a-z%]*)/g; // Units are ignored.
+
+        const radius_shorthand = properties.get("--squircle-radius").toString();
+        const matches = radius_shorthand.match(radiusRegex);
+
+        if (matches) {
+          shorthand_R = matches.map(val => parseInt(val, 10) * distanceRatio);
+
+          while (shorthand_R.length < 4) {
+            if (shorthand_R.length === 1) {
+              // If there's only one value, duplicate it for all corners
+              shorthand_R.push(shorthand_R[0]);
+            } else if (shorthand_R.length === 2) {
+              // If there are two values, first one applies to top and bottom, second to left and right
+              shorthand_R = [shorthand_R[0], shorthand_R[1], shorthand_R[0], shorthand_R[1]];
+            } else if (shorthand_R.length === 3) {
+              // If there are three values, first applies to top, second to right and left, third to bottom
+              shorthand_R = [shorthand_R[0], shorthand_R[1], shorthand_R[2], shorthand_R[1]];
+            }
+          }
+        } else {
+          // if no radii at all are provided, set default radius = 8, otherwise set undefined ones to 0
+          const defaultRadius = squircleRadii.every(isNaN) ? 8 * distanceRatio : 0;
+          shorthand_R = [defaultRadius,defaultRadius,defaultRadius,defaultRadius];
+        }
+      }
+
+      // Replace NaN values in radii with corresponding values from shorthand or default
+      squircleRadii = squircleRadii.map((val, i) => isNaN(val) ? shorthand_R[i] : val);
+    
       const squrcleOutline = parseFloat(
         properties.get("--squircle-outline"),
         10
@@ -119,20 +163,22 @@ if (typeof registerPaint !== "undefined") {
         }
       };
 
-      if (squircleRadius < geom.width / 2 && squircleRadius < geom.height / 2) {
+      const maxRadius = Math.max(...squircleRadii);
+      if (maxRadius < geom.width / 2 && maxRadius < geom.height / 2) {
         drawSquircle(
           ctx,
           geom,
-          squircleRadius,
+          squircleRadii,
           isSmooth(),
           isOutline(),
           isColor()
         );
       } else {
+        const minRadius = Math.min(geom.width / 2, geom.height / 2);
         drawSquircle(
           ctx,
           geom,
-          Math.min(geom.width / 2, geom.height / 2),
+          squircleRadii.map(() => minRadius),
           isSmooth(),
           isOutline(),
           isColor()
