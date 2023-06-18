@@ -1,3 +1,4 @@
+import React from "react";
 import Head from "next/head";
 
 import Intro from "@/sections/Intro";
@@ -13,15 +14,15 @@ import Footer from "@/sections/Footer";
 
 import styles from "./app.module.scss";
 
-(async function () {
-  if (!(("paintWorklet" in CSS) as any)) {
-    await import("css-paint-polyfill");
-  }
-
-  // (CSS as any).paintWorklet.addModule("../../lib/paintWorklet/squircle.js");
-})();
-
 export default function Home() {
+  React.useEffect(() => {
+    if (!(("paintWorklet" in CSS) as any)) {
+      import("css-paint-polyfill");
+    }
+
+    (CSS as any).paintWorklet.addModule("squircle.min.js");
+  }, []);
+
   return (
     <>
       <Head>

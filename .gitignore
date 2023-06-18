@@ -1,12 +1,36 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# dependencies
-/node_modules
+# Node.js
+node_modules
+
+# Build output
+/.next
+/out
+
+# Environment variables
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Cache and logs
 /.pnp
 .pnp.js
+.next/cache
+/.next/server
+/.next/static
+/.next/ssr-bundle
+/.next/build-manifest.json
+/.next/react-loadable-manifest.json
 
-# testing
-/coverage
+# Package manager files
+yarn.lock
+.pnpm-lock.yaml
+package-lock.json
+
+# IDE files
+.idea
+.vscode
 
 # misc
 .DS_Store

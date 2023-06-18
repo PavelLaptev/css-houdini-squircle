@@ -1,1 +1,0 @@
-self.__REACT_LOADABLE_MANIFEST={"index.tsx -> css-paint-polyfill":{"id":"index.tsx -> css-paint-polyfill","files":["static/chunks/node_modules_css-paint-polyfill_dist_css-paint-polyfill_js.js"]}}
