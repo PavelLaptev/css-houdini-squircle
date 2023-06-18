@@ -304,4 +304,5 @@ In order to test the script locally:
 
 - Removed `--squircle-ratio` property. It's now fixed to `1.8`. It's still possible to change the ratio by changing `--squircle-smooth` property.
 - Moved the demo to NextJS
+- Added `--squircle-radius-top-left`, `--squircle-radius-top-right`, `--squircle-radius-bottom-right`, `--squircle-radius-bottom-left` properties
 - Added separate `lib` folder only for the script
