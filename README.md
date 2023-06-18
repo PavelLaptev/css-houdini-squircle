@@ -77,7 +77,7 @@ React.useEffect(() => {
 
 # 🎛  Custom CSS Properties
 
-![--squircle-radius](./README-images/--squircle-radius.png)
+![--squircle-radius](https://raw.githubusercontent.com/PavelLaptev/squircle-houdini-css/main/README-images/--squircle-radius.png)
 
 ## --squircle-radius property
 
@@ -108,7 +108,7 @@ Set radii for the corners individually
 
 ---
 
-![individual border radius](./README-images/squircle-radius-separate.png)
+![individual border radius](https://raw.githubusercontent.com/PavelLaptev/squircle-houdini-css/main/README-images/squircle-radius-separate.png)
 
 ## individual border radius
 
@@ -132,7 +132,7 @@ The property controls the roundness of the corners individually.
 
 ---
 
-![--squircle-smooth](./README-images/--squircle-smooth.png)
+![--squircle-smooth](https://raw.githubusercontent.com/PavelLaptev/squircle-houdini-css/main/README-images/--squircle-smooth.png)
 
 ## --squircle-smooth property
 
@@ -158,7 +158,7 @@ The property controls the length of bezier guide lines. Could be defined by `--s
 
 ---
 
-![--squircle-outline](./README-images/--squircle-outline.png)
+![--squircle-outline](https://raw.githubusercontent.com/PavelLaptev/squircle-houdini-css/main/README-images/--squircle-outline.png)
 
 ## --squircle-outline property
 
@@ -184,7 +184,7 @@ The property controls squircle outline. There are two methods how too use it wit
 
 ---
 
-![--squircle-fill](./README-images/--squircle-fill.png)
+![--squircle-fill](https://raw.githubusercontent.com/PavelLaptev/squircle-houdini-css/main/README-images/--squircle-fill.png)
 
 ## --squircle-fill property
 
@@ -281,13 +281,12 @@ If you have any ideas, just [open an issue](https://github.com/PavelLaptev/squir
 
 If you'd like to contribute, please fork the repository. Pull requests are warmly welcome.
 
-The project structure is separated into `nextJS` app and `lib` folder. The `lib` folder contains the script itself. The `nextJS` app is used for the demo. The `lib` folder is a separate NPM package.
+The project structure is separated into `nextJS` app and `lib` folder. The `lib` folder contains the script itself. The `nextJS` app is used for the demo.
 
 
 ```
 📁 root
   📁 lib
-    - package.json
     - squircle.js
   📁 … other nextJS folders
 ```
@@ -295,7 +294,7 @@ The project structure is separated into `nextJS` app and `lib` folder. The `lib`
 In order to test the script locally:
 
 1. you need to run `npm run dev` in the root folder. It will start the NextJS app.
-2. Then you need to run `npm run watch:build` in the `lib` folder. It will start the watcher for the script. It will build the script every time you change it and create `squircle.min.js` file in the `lib` folder and in the `public` folder of the NextJS app.
+2. Then you need to run `npm run watch:lib-build`. It will start the watcher for the script. It will build the script every time you change it and create `squircle.min.js` file in the `root` folder and in the `public` folder of the NextJS app.
 3. In the `index.tsx` file of the NextJS app, you can uncomment the line with [test section](https://github.com/PavelLaptev/squircle-houdini-css/blob/70f81510d45185e3946ec2cbec3cd4ab6495224b/src/pages/index.tsx#L57) un comment other in order to ease the development process.
 
 ---
@@ -303,6 +302,7 @@ In order to test the script locally:
 ## Change log (v0.3.0)
 
 - Removed `--squircle-ratio` property. It's now fixed to `1.8`. It's still possible to change the ratio by changing `--squircle-smooth` property.
-- Moved the demo to NextJS
 - Added `--squircle-radius-top-left`, `--squircle-radius-top-right`, `--squircle-radius-bottom-right`, `--squircle-radius-bottom-left` properties
 - Added separate `lib` folder only for the script
+- removed `css-paint-polyfill` from dependencies. It's now optional.
+- Moved the demo to NextJS

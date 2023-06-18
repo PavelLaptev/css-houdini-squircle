@@ -1,10 +1,15 @@
 {
   "name": "squircle-css-houdini",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "private": false,
+  "homepage": "https://github.com/PavelLaptev/squircle-houdini-css",
+  "description": "A tiny CSS Houdini module that allows to add a squircle shape to HTML elements",
+  "author": "Pavel Laptev",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "watch:lib-build": "nodemon --watch lib/squircle.js --exec 'npm run lib-build'",
+    "lib-build": "uglifyjs lib/squircle.js -o squircle.min.js && cp squircle.min.js public/squircle.min.js",
     "start": "next start",
     "lint": "next lint"
   },
@@ -21,6 +26,8 @@
   },
   "devDependencies": {
     "css-paint-polyfill": "^3.4.0",
-    "sass": "^1.63.4"
+    "sass": "^1.63.4",
+    "nodemon": "^2.0.22",
+    "uglify-js": "^3.17.4"
   }
 }
