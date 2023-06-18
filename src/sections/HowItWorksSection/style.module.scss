@@ -3,6 +3,7 @@
 .wrapWidth {
   border-top: 2px solid var(--dark-clr);
   width: 100%;
+  border-bottom: 2px solid var(--dark-clr);
   @media only screen and (max-width: 620px) {
     border-top: none;
   }
