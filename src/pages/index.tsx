@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 
-// import TestSection from "@/sections/TestSection";
+import TestSection from "@/sections/TestSection";
 import Intro from "@/sections/Intro";
 import CSSSection from "@/sections/CSSSection";
 import Scalable from "@/sections/Scalable";
