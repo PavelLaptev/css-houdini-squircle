@@ -1,17 +1,18 @@
-.button {
-  cursor: pointer;
-  text-decoration: none;
-  border: none;
-  outline: none;
-  padding: 14px 20px;
+.buttonWrap {
+  display: flex;
   background: var(--dark-clr);
-  -webkit-mask-image: paint(squircle);
+  mask-image: paint(squircle);
   --squircle-radius: 16px;
   --squircle-smooth: 0.5;
+}
+
+.button {
+  padding: 14px 20px;
   font-family: "Druck";
   font-size: 16px;
   color: var(--light-clr);
   transition: all 0.1s ease;
+
   &:hover {
     background: var(--accent-clr);
   }

@@ -9,14 +9,16 @@ interface ButtonProps {
 
 const Button = (props: ButtonProps) => {
   return (
-    <a
-      target="_blank"
-      rel="noopener noreferrer"
-      href={props.link}
-      className={`${styles.button} ${props.className}`}
-    >
-      {props.text}
-    </a>
+    <div className={styles.buttonWrap}>
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href={props.link}
+        className={`${styles.button} ${props.className}`}
+      >
+        {props.text}
+      </a>
+    </div>
   );
 };
 

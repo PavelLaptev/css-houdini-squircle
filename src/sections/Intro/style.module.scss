@@ -75,19 +75,13 @@
 
 .buttons {
   display: flex;
+  gap: 8px;
   margin-top: var(--padding-l);
   @media only screen and (max-width: 1100px) {
     margin-top: var(--padding-m);
   }
   @media only screen and (max-width: 620px) {
     flex-direction: column;
-  }
-  button {
-    margin-right: 8px;
-    @media only screen and (max-width: 620px) {
-      margin-right: 0;
-      margin-bottom: var(--padding-xxs);
-    }
   }
 }
 
@@ -152,13 +146,4 @@
   &:last-child {
     margin-bottom: 0;
   }
-}
-
-.test {
-  position: relative;
-  width: 300px;
-  height: 400px;
-  background: var(--dark-clr);
-  mask-image: paint(squircle);
-  --squircle-smooth: 1;
 }

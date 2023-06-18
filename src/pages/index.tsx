@@ -1,10 +1,10 @@
 import React from "react";
 import Head from "next/head";
 
+import TestSection from "@/sections/TestSection";
 import Intro from "@/sections/Intro";
 import CSSSection from "@/sections/CSSSection";
 import Scalable from "@/sections/Scalable";
-import JSSection from "@/sections/JSSection";
 import ButtonsSection from "@/sections/ButtonsSection";
 import BenefitsSection from "@/sections/BenefitsSection";
 import CanIUse from "@/sections/CanIUse";
@@ -54,11 +54,11 @@ export default function Home() {
         />
       </Head>
       <main className={styles.app}>
+        {/* <TestSection /> */}
         <Intro />
         <CSSSection />
         <Scalable />
         <HowItWorksSection />
-        <JSSection />
         <ButtonsSection />
         <BenefitsSection />
         <CanIUse />

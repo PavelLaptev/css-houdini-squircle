@@ -1,0 +1,20 @@
+.wrap {
+  position: relative;
+  display: flex;
+  max-width: var(--max-width);
+  width: 100%;
+  padding: var(--vertical-paddings) var(--horizontal-paddings);
+  border-bottom: 2px solid var(--dark-clr);
+}
+
+.squircle {
+  width: 300px;
+  height: 300px;
+  background: paint(squircle);
+  // --squircle-fill: rgba(0, 0, 0, 0.1);
+  // mask-image: paint(squircle);
+  // --squircle-outline: 2px;
+  // --squircle-radius: 40px;
+  --squircle-radius-top-left: 40px;
+  --squircle-radius-top-right: 10px;
+}
