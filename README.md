@@ -269,14 +269,34 @@ In order to get the module work on other browsers, you can use [Paint Worklets p
 
 ---
 
-## Contributing
+## Contributing and testing
 
 If you have any ideas, just [open an issue](https://github.com/PavelLaptev/squircle-houdini-css/issues) and tell what you think.
 
 If you'd like to contribute, please fork the repository. Pull requests are warmly welcome.
 
-The project structure is separated into `nextJS` app and `lib` folder. The `lib` folder contains the script itself. The `nextJS` app is used for the demo. 
+The project structure is separated into `nextJS` app and `lib` folder. The `lib` folder contains the script itself. The `nextJS` app is used for the demo. The `lib` folder is a separate NPM package.
 
+
+```
+📁 root
+  📁 lib
+    - package.json
+    - squircle.js
+  📁 … other nextJS folders
+```
+
+In order to test the script locally:
+
+1. you need to run `npm run dev` in the root folder. It will start the NextJS app.
+2. Then you need to run `npm run watch:build` in the `lib` folder. It will start the watcher for the script. It will build the script every time you change it and create `squircle.min.js` file in the `lib` folder and in the `public` folder of the NextJS app.
+3. In the `index.tsx` file of the NextJS app, you can uncomment the line with [test section](https://github.com/PavelLaptev/squircle-houdini-css/blob/70f81510d45185e3946ec2cbec3cd4ab6495224b/src/pages/index.tsx#L57) un comment other in order to ease the development process.
+
+---
+
+## Contributors
+
+[![All Contributors](https://img.shields.io/github/all-contributors/projectOwner/projectName?color=ee8449&style=flat-square)](#contributors)
 
 
 ---
@@ -286,7 +306,3 @@ The project structure is separated into `nextJS` app and `lib` folder. The `lib`
 - Removed `--squircle-ratio` property. It's now fixed to `1.8`. It's still possible to change the ratio by changing `--squircle-smooth` property.
 - Moved the demo to NextJS
 - Added separate `lib` folder only for the script
-
----
-
-## Contributors
