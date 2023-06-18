@@ -294,13 +294,6 @@ In order to test the script locally:
 
 ---
 
-## Contributors
-
-[![All Contributors](https://img.shields.io/github/all-contributors/projectOwner/projectName?color=ee8449&style=flat-square)](#contributors)
-
-
----
-
 ## Change log (v0.3.0)
 
 - Removed `--squircle-ratio` property. It's now fixed to `1.8`. It's still possible to change the ratio by changing `--squircle-smooth` property.
