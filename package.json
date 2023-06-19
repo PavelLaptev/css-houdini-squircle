@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "watch:lib-build": "nodemon --watch lib/squircle.js --exec 'npm run lib-build'",
+    "lib-build": "uglifyjs lib/squircle.js -o squircle.min.js && cp squircle.min.js public/squircle.min.js",
     "start": "next start",
     "lint": "next lint"
   },
@@ -16,11 +18,12 @@
     "eslint": "8.42.0",
     "eslint-config-next": "13.4.4",
     "next": "13.4.4",
-    "nodemon": "^2.0.22",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "5.1.3",
     "css-paint-polyfill": "^3.4.0",
-    "sass": "^1.63.4"
+    "sass": "^1.63.4",
+    "nodemon": "^2.0.22",
+    "uglify-js": "^3.17.4"
   }
 }

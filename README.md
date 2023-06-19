@@ -297,7 +297,6 @@ In order to test the script locally:
 1. you need to run `npm run dev` in the root folder. It will start the NextJS app.
 2. Then you need to run `npm run watch:build` in the `lib` folder. It will start the watcher for the script. It will build the script every time you change it and create `squircle.min.js` file in the `lib` folder and in the `public` folder of the NextJS app.
 3. In the `index.tsx` file of the NextJS app, you can uncomment the line with [test section](https://github.com/PavelLaptev/squircle-houdini-css/blob/70f81510d45185e3946ec2cbec3cd4ab6495224b/src/pages/index.tsx#L57) un comment other in order to ease the development process.
-4. Do not forget to run `npm run lib-build` before pushing the changes.
 
 ---
 
