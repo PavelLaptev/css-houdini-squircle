@@ -1,0 +1,15 @@
+# Ignore everything
+*
+
+# But not these files...
+!lib/**/*
+!.npmignore
+!README.md
+!README-images
+# etc...
+
+# ...even if they are in subdirectories
+
+# if the files to be tracked are in subdirectories
+!squircle.min.js
+	

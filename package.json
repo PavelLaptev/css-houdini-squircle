@@ -1,7 +1,15 @@
 {
   "name": "squircle-css-houdini",
-  "version": "0.1.0",
+  "version": "0.3.0",
+  "description": "A tiny CSS Houdini module that allows to add a squircle shape to HTML elements",
+  "main": "lib/squircle.js",
   "private": false,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PavelLaptev/squircle-houdini-css"
+  },
+  "homepage": "https://github.com/PavelLaptev/squircle-houdini-css",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
