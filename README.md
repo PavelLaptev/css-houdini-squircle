@@ -229,7 +229,7 @@ The property accepts any color, including variables.
 <script>
   if ("paintWorklet" in CSS) {
     CSS.paintWorklet.addModule(
-      "https://www.unpkg.com/css-houdini-squircle@0.2.2/squircle.min.js"
+      "https://www.unpkg.com/css-houdini-squircle@0.3.0/squircle.min.js"
     );
   }
 </script>
