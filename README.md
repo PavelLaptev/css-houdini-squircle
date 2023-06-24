@@ -99,7 +99,7 @@ Set radii for the corners individually
 .squircle {
   /* other properties */
   width: 200px;
-	height: 200px;
+  height: 200px;
   background: paint(squircle);
   /* the property */
   --squircle-radius: 20px;
@@ -120,13 +120,13 @@ The property controls the roundness of the corners individually.
 .squircle {
   /* other properties */
   width: 200px;
-	height: 200px;
+  height: 200px;
   background: paint(squircle);
   /* the property */
   --squircle-radius-top-left: 0px;
-	--squircle-radius-top-right: 15px;
-	--squircle-radius-bottom-right: 30px;
-	--squircle-radius-bottom-left: 40px;
+  --squircle-radius-top-right: 15px;
+  --squircle-radius-bottom-right: 30px;
+  --squircle-radius-bottom-left: 40px;
 }
 ```
 
@@ -148,7 +148,7 @@ The property controls the length of bezier guide lines. Could be defined by `--s
 .squircle {
   /* other properties */
   width: 200px;
-	height: 200px;
+  height: 200px;
   background: paint(squircle);
   --squircle-radius: 20px;
   /* the property */
@@ -174,7 +174,7 @@ The property controls squircle outline. There are two methods how too use it wit
 .squircle {
   /* other properties */
   width: 200px;
-	height: 200px;
+  height: 200px;
   background: paint(squircle);
   --squircle-radius: 20px;
   /* the property */
@@ -202,7 +202,7 @@ The property accepts any color, including variables.
 .squircle {
   /* other properties */
   width: 200px;
-	height: 200px;
+  height: 200px;
   background: paint(squircle);
   --squircle-radius: 20px;
   /* the property */
