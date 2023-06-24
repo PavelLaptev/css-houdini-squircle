@@ -6,7 +6,7 @@ A tiny CSS Houdini module that allows adding a squircle shape to HTML elements.
 
 ---
 
-### 🎻  [Demo on GitHub Pages](https://pavellaptev.github.io/squircle-houdini-css/)
+### 🎻  [Demo on GitHub Pages](https://pavellaptev.github.io/css-houdini-squircle/)
 
 ### 👾  [Codepen examples](https://codepen.io/collection/XjgQqp)
 
